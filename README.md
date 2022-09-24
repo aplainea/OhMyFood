@@ -1,2 +1,2 @@
 # OhMyFood
-OpenClassrooms - Projet 3 : OhMyFood, répertorie les menus de restaurants.
+OpenClassrooms - Projet 3 : OhMyFood, commande de repas en ligne.
