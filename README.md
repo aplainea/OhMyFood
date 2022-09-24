@@ -2,7 +2,7 @@
 
 OpenClassrooms - Projet 3 : OhMyFood, commande de repas en ligne.
 
-Compilation SASS on local
+Compilation SASS en local
 
 ```
 DEV:
