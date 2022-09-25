@@ -1,0 +1,12 @@
+header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 3px $shadow-black;
+}
+
+.header__logo {
+  height: 40px;
+  margin: 10px;
+}

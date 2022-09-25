@@ -378,5 +378,17 @@ h6 {
     transform: rotate(360deg);
   }
 }
+header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.header__logo {
+  height: 40px;
+  margin: 10px;
+}
 
 /*# sourceMappingURL=main.css.map */
