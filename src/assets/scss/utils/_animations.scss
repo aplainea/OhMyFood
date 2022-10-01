@@ -1,0 +1,36 @@
+/* Keyframes */
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@include keyframes(fadeOut) {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@include keyframes(fadeInSpin) {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(360deg);
+  }
+}

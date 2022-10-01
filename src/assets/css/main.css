@@ -1,4 +1,37 @@
-/* Colors */ /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Colors */ /* mixins */ /* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeInSpin {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(360deg);
+  }
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -309,6 +342,10 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /**
  * Fonts
  *
@@ -353,31 +390,9 @@ h6 {
   border-bottom: 10px solid rgb(255, 121, 218);
   border-left: 10px solid transparent;
   border-radius: 50%;
-  animation: spin 1s ease infinite;
+  animation: fadeInSpin 1s ease infinite;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes spin {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-    transform: rotate(0deg);
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-    transform: rotate(360deg);
-  }
-}
 header {
   height: 60px;
   display: flex;

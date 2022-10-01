@@ -5,15 +5,11 @@
   height: 100%;
   z-index: 1000;
   background-color: $shadow-black;
-  animation: fadeOut 1s ease-out forwards 3s;
+  @include animation(fadeOut 1s ease-out forwards 3s);
 }
 
 .loader {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  @include absolute(0, 0, 0, 0);
   margin: auto;
   width: 100px;
   height: 100px;
@@ -22,29 +18,5 @@
   border-bottom: 10px solid $secondary;
   border-left: 10px solid transparent;
   border-radius: 50%;
-  animation: spin 1s ease infinite;
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes spin {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-    transform: rotate(0deg);
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-    transform: rotate(360deg);
-  }
+  @include animation(fadeInSpin 1s ease infinite);
 }
