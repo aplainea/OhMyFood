@@ -346,6 +346,12 @@ template {
   box-sizing: border-box;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
 /**
  * Fonts
  *
@@ -391,6 +397,38 @@ h6 {
   border-left: 10px solid transparent;
   border-radius: 50%;
   animation: fadeInSpin 1s ease infinite;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px 0;
+  background: rgb(48, 48, 48);
+}
+
+.footer__logo {
+  height: 20px;
+  margin-bottom: 10px;
+}
+.footer__logo path {
+  fill: rgb(255, 255, 255);
+}
+.footer__others {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 40px;
+}
+.footer__link {
+  padding: 5px 0;
+}
+.footer__link:hover {
+  color: rgb(147, 86, 220);
+}
+.footer__icon {
+  margin-right: 10px;
+  height: 14px;
+  width: 14px;
 }
 
 header {

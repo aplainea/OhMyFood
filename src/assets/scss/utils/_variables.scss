@@ -2,6 +2,12 @@
 $primary: rgb(147, 86, 220);
 $secondary: rgb(255, 121, 218);
 $tertiary: rgb(153, 226, 208);
+$gradient: linear-gradient(
+  to right,
+  $primary 30%,
+  $secondary 60%,
+  $tertiary 100%
+);
 
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
