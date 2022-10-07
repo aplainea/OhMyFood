@@ -1,2 +1,5 @@
-node_modules
+.github
 .vscode
+node_modules
+
+src/sass/css/main.css.map
