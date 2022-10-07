@@ -4,9 +4,18 @@ header {
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 3px $shadow-black;
+
+  i {
+    @include absolute(22px, null, null, 20px);
+    &:hover {
+      color: $primary;
+    }
+  }
 }
 
-.header__logo {
-  height: 40px;
-  margin: 10px;
+.header {
+  &__logo {
+    height: 40px;
+    margin: 10px;
+  }
 }
