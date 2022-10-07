@@ -17,3 +17,32 @@
   bottom: $bottom;
   left: $left;
 }
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin backgroundGradiant($angle, $first-color, $second-color, $third-color) {
+  background: $first-color;
+
+  @if $third-color {
+    background: linear-gradient(
+      $angle,
+      $first-color,
+      $second-color,
+      $third-color
+    );
+  } @else {
+    background: linear-gradient($angle, $first-color, $second-color);
+  }
+}
+
+@mixin shadow($offset-x, $offset-y, $blur-radius, $shadow-color) {
+  @if $shadow-color {
+    box-shadow: $offset-x $offset-y $blur-radius $shadow-color;
+  } @else {
+    box-shadow: $offset-x $offset-y $blur-radius $shadow-black;
+  }
+}

@@ -1,9 +1,7 @@
 header {
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 3px $shadow-black;
+  @include flexCenter();
+  @include shadow(0, 2px, 3px, null);
 
   i {
     @include absolute(22px, null, null, 20px);

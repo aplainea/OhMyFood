@@ -1,0 +1,28 @@
+.btn-primary {
+  @include backgroundGradiant(
+    175deg,
+    rgba($secondary, 0.9),
+    rgba($primary, 0.9) 80%,
+    null
+  );
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  @include shadow(0, 3px, 3px, null);
+
+  &:hover {
+    cursor: pointer;
+    @include backgroundGradiant(
+      175deg,
+      rgba($secondary, 0.8),
+      rgba($primary, 0.8) 80%,
+      null
+    );
+    @include shadow(0, 5px, 5px, rgba($gray, 0.5));
+    transform: translateY(-5px);
+    transition: opacity 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+}
