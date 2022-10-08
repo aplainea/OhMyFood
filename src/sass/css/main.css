@@ -31,6 +31,17 @@
     transform: rotate(360deg);
   }
 }
+@keyframes fadeInFresh {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -352,6 +363,10 @@ a {
   color: rgb(0, 0, 0);
 }
 
+p {
+  margin: 0;
+}
+
 /**
  * Fonts
  *
@@ -511,6 +526,7 @@ header i:hover {
   padding: 30px 10px;
 }
 .presentation__container h2 {
+  width: 70%;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   margin: 5px 0;
@@ -520,6 +536,86 @@ header i:hover {
   color: rgb(48, 48, 48);
   font-weight: 400;
   margin: 5px 0 30px 0;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 50px 20px;
+}
+.fonctionnement h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+.fonctionnement__list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 25px 0;
+  padding-left: 20px;
+}
+.fonctionnement__list--item + .fonctionnement__list--item {
+  margin-top: 20px;
+}
+.fonctionnement__list--item {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  background-color: rgba(48, 48, 48, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+.fonctionnement__list--item:nth-child(1n) {
+  animation: fadeInFresh 1s ease-in-out both;
+  animation-delay: 0.1s;
+}
+.fonctionnement__list--item:nth-child(2n) {
+  animation: fadeInFresh 1s ease-in-out both;
+  animation-delay: 0.2s;
+}
+.fonctionnement__list--item:nth-child(3n) {
+  animation: fadeInFresh 1s ease-in-out both;
+  animation-delay: 0.3s;
+}
+.fonctionnement__list--item:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+  box-shadow: 0 5px 5px rgba(48, 48, 48, 0.5);
+  transform: translateY(-2px);
+  transition: opacity 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.fonctionnement__list--item:hover i {
+  color: rgb(147, 86, 220);
+}
+.fonctionnement__list--link {
+  display: flex;
+  align-items: center;
+}
+.fonctionnement__list span {
+  position: absolute;
+  left: -20px;
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(147, 86, 220);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 6px;
+}
+.fonctionnement__list i {
+  font-size: 20px;
+  color: rgba(48, 48, 48, 0.8);
+  margin: 0 20px 0 0;
+}
+.fonctionnement__list p {
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

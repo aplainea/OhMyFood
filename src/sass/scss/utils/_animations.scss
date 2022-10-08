@@ -34,3 +34,15 @@
     transform: rotate(360deg);
   }
 }
+
+@include keyframes(fadeInFresh) {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
