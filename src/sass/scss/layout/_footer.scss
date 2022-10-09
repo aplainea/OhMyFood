@@ -1,6 +1,4 @@
 footer {
-  @include absolute(null, null, 0, null);
-  width: 100%;
   padding: 25px 0;
   background: $gray;
 }

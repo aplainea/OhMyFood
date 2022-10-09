@@ -1,0 +1,49 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  background-color: $white;
+  @include shadow(0, 3px, 3px, null);
+
+  &:hover {
+    @include shadow(0, 5px, 5px, rgba($gray, 0.5));
+    transform: translateY(-2px);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  // Delay between items
+  @for $i from 1 through 5 {
+    &__container:nth-child(#{$i}n) {
+      @include animation(fadeInFresh 1s ease-in-out both);
+      animation-delay: #{$i * 0.2}s;
+    }
+  }
+
+  &__container + &__container {
+    margin-top: 20px;
+  }
+
+  & img {
+    width: 100%;
+    max-width: 350px;
+    height: 175px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+
+  & span {
+    @include absolute(5%, 5%, null, null);
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: $green;
+    color: $green-text;
+  }
+
+  & figcaption {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}

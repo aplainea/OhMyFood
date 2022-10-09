@@ -40,8 +40,6 @@
 
   h2 {
     width: 70%;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
     margin: 5px 0;
     padding: 0 10px;
   }
@@ -62,9 +60,6 @@
   margin: 50px 20px;
 
   h2 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
     margin: 5px 0;
     padding: 0 10px;
   }
@@ -88,10 +83,11 @@
       padding: 25px;
       @include shadow(0, 3px, 3px, null);
 
+      // Delay between items
       @for $i from 1 through 3 {
         &:nth-child(#{$i}n) {
           @include animation(fadeInFresh 1s ease-in-out both);
-          animation-delay: #{$i * 0.1}s;
+          animation-delay: #{$i * 0.2}s;
         }
       }
 
@@ -99,7 +95,8 @@
         background-color: rgba($primary, 0.2);
         @include shadow(0, 5px, 5px, rgba($gray, 0.5));
         transform: translateY(-2px);
-        transition: opacity 0.3s, box-shadow 0.3s, transform 0.3s;
+        transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s,
+          transform 0.3s;
 
         i {
           color: $primary;
@@ -136,5 +133,24 @@
       text-overflow: ellipsis;
       overflow: hidden;
     }
+  }
+}
+
+// Restaurant
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 50px 20px;
+  background-color: $gray-10;
+
+  // More then mobile
+  // &__container {
+  //   display: flex;
+  // }
+
+  h2 {
+    margin: 5px 0 25px 0;
+    padding: 0 10px;
   }
 }

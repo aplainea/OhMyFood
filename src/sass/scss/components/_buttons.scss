@@ -12,6 +12,7 @@
   border-radius: 50px;
   padding: 15px;
   @include shadow(0, 3px, 3px, null);
+  @include animation(fadeInFresh 1s ease-in-out both);
 
   &:hover {
     cursor: pointer;
