@@ -1,7 +1,6 @@
 .card {
   position: relative;
   width: 100%;
-  max-width: 350px;
   border-radius: 20px;
   background-color: $white;
   @include shadow(0, 3px, 3px, null);
@@ -26,7 +25,6 @@
 
   & img {
     width: 100%;
-    max-width: 350px;
     height: 175px;
     max-height: 200px;
     object-fit: cover;
@@ -45,5 +43,9 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+
+    & i {
+      padding: 5px 10px;
+    }
   }
 }

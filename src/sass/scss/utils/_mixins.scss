@@ -39,6 +39,24 @@
   }
 }
 
+@mixin colorGradiant($angle, $first-color, $second-color, $third-color) {
+  background: $first-color;
+
+  @if $third-color {
+    background: linear-gradient(
+      $angle,
+      $first-color,
+      $second-color,
+      $third-color
+    );
+  } @else {
+    background: linear-gradient($angle, $first-color, $second-color);
+  }
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @mixin shadow($offset-x, $offset-y, $blur-radius, $shadow-color) {
   @if $shadow-color {
     box-shadow: $offset-x $offset-y $blur-radius $shadow-color;

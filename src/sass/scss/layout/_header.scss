@@ -1,4 +1,8 @@
 header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: rgba($white, 0.9);
   height: 60px;
   @include flexCenter();
   @include shadow(0, 2px, 3px, null);
