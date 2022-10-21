@@ -1,6 +1,7 @@
 .icon-heart {
   font-size: 25px;
   color: $black;
+
   &:hover {
     @include colorGradiant(
       0deg,
@@ -8,7 +9,7 @@
       rgba($primary, 0.9) 80%,
       null
     );
-    transform: translateY(-2px);
-    transition: transform 0.3s;
+    @include animation(heart 1.2s);
+    animation-iteration-count: 3;
   }
 }

@@ -24,6 +24,12 @@
   align-items: center;
 }
 
+@mixin overText() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @mixin backgroundGradiant($angle, $first-color, $second-color, $third-color) {
   background: $first-color;
 

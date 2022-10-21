@@ -2,7 +2,7 @@
 
 // Plus qu'un simple Ordinateur
 @media screen and (min-width: 1440px) {
-  main {
+  main#home {
     max-width: 1440px;
     margin: auto;
   }
@@ -28,14 +28,6 @@
   }
 }
 
-// Tablette - Mobile
-@media screen and (min-width: 768px) {
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 // Localisaiton
 .localisation__form {
   @include flexCenter();
@@ -164,9 +156,7 @@
 
     p {
       font-weight: 600;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
+      @include overText();
     }
   }
 }
@@ -182,11 +172,6 @@
   &__container {
     width: 100%;
   }
-
-  // More then mobile
-  // &__container {
-  //   display: flex;
-  // }
 
   h2 {
     margin: 5px 0 25px 0;

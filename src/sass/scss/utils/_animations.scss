@@ -46,3 +46,25 @@
     visibility: visible;
   }
 }
+
+@include keyframes(heart) {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  80% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

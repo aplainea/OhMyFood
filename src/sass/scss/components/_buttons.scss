@@ -23,7 +23,7 @@
       null
     );
     @include shadow(0, 5px, 5px, rgba($gray, 0.5));
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     transition: opacity 0.3s, box-shadow 0.3s, transform 0.3s;
   }
 }

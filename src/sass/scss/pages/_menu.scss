@@ -1,1 +1,171 @@
 // Menu restaurant
+
+// Tablette and more
+@media screen and (min-width: 768px) {
+  .menu__article {
+    &--price {
+      font-size: 16px !important;
+    }
+
+    &--check i {
+      font-size: 30px !important;
+    }
+  }
+}
+
+.menu {
+  &__img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+  }
+
+  &__section {
+    max-width: 1024px;
+    margin: auto;
+    padding: 40px 20px;
+    border-radius: 50px 50px 0 0;
+    background: $gray-light;
+    transform: translateY(-50px);
+  }
+
+  &__title--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    i {
+      margin-right: 20px;
+    }
+  }
+
+  article {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  &__article {
+    &--container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--title {
+      position: relative;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-indent: 8px;
+      transition: text-indent 0.3s;
+      &:hover {
+        text-indent: 16px;
+        &::after {
+          width: 100px;
+        }
+      }
+      &::after {
+        content: "";
+        @include absolute(null, null, -3px, 7px);
+        width: 40px;
+        height: 3px;
+        background-color: $tertiary;
+        transition: width 0.3s;
+      }
+    }
+
+    &--list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 20px 0;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        border-radius: 15px;
+        padding: 16px 8px;
+        overflow: hidden;
+        @include shadow(0, 3px, 3px, null);
+
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}n) {
+            @include animation(fadeInFresh 1s ease-in-out both);
+            animation-delay: #{$i * 0.2}s;
+          }
+        }
+
+        &:hover {
+          @include shadow(0, 5px, 5px, rgba($gray, 0.5));
+          transform: translateY(-2px);
+          transition: box-shadow 0.3s, transform 0.3s;
+
+          .menu__article--check {
+            flex-basis: 15%;
+            transform: translateX(0%);
+          }
+
+          .menu__article--check {
+            & i {
+              @include animation(fadeInSpin 0.5s ease);
+            }
+          }
+        }
+
+        p {
+          max-width: 90%;
+          font-size: 12px;
+          font-weight: 400;
+          margin-top: 5px;
+          @include overText();
+        }
+      }
+    }
+
+    &--text {
+      flex: 1;
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    &--price {
+      display: flex;
+      align-items: flex-end;
+      padding-right: 20px;
+    }
+
+    &--check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $tertiary;
+      transform: translateX(105%);
+      flex-basis: 0%;
+      border-radius: 0 15px 15px 0;
+      margin: -16px -8px;
+      transition: 0.4s ease-in-out;
+    }
+
+    &--check i {
+      font-size: 20px;
+      color: $tertiary;
+      background: $white;
+      border-radius: 50%;
+    }
+  }
+
+  &__btn {
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+  }
+}

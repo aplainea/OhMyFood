@@ -1,9 +1,21 @@
+// Tablette - Mobile
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 footer {
   padding: 25px 0;
   background: $gray;
 }
 
 .footer {
+  &__fix--margin-top {
+    margin-top: -50px;
+  }
   &__logo {
     height: 20px;
     margin-bottom: 10px;
