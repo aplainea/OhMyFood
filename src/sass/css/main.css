@@ -904,7 +904,7 @@ header i:hover {
   animation: fadeInSpin 1s ease;
 }
 .menu__article--list li p {
-  max-width: 90%;
+  max-width: 80%;
   font-size: 12px;
   font-weight: 400;
   margin-top: 5px;
@@ -913,6 +913,7 @@ header i:hover {
   text-overflow: ellipsis;
 }
 .menu__article--text {
+  max-width: 75%;
   flex: 1;
 }
 .menu__article--text h3 {
