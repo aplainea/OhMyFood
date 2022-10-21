@@ -49,22 +49,11 @@
 
 @include keyframes(heart) {
   0% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0.9;
-    transform: scale(0.9);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(0.5);
-  }
-  80% {
-    opacity: 0.9;
-    transform: scale(0.9);
+    opacity: 0;
+    background-size: 100% 100%;
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    background-size: 100% 0%;
   }
 }

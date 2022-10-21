@@ -44,23 +44,12 @@
 }
 @keyframes heart {
   0% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0.9;
-    transform: scale(0.9);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(0.5);
-  }
-  80% {
-    opacity: 0.9;
-    transform: scale(0.9);
+    opacity: 0;
+    background-size: 100% 100%;
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    background-size: 100% 0%;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -506,21 +495,35 @@ h3 {
   justify-content: space-between;
   padding: 10px;
 }
-.card figcaption i {
-  padding: 5px 10px;
+.card figcaption > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .icon-heart {
+  cursor: pointer;
   font-size: 25px;
+}
+.icon-heart--unliked {
   color: rgb(0, 0, 0);
 }
-.icon-heart:hover {
-  background: rgba(255, 121, 218, 0.9);
-  background: linear-gradient(0deg, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9) 80%);
+.icon-heart--liked {
+  color: transparent;
+  background-image: linear-gradient(to top, rgb(255, 121, 218), rgb(147, 86, 220));
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: heart 1.2s;
-  animation-iteration-count: 3;
+  animation: heart 2s;
+}
+
+* > .fa-heart.icon-heart--liked,
+*:hover > .fa-heart.icon-heart--unliked {
+  display: none;
+}
+
+*:hover > .fa-heart.icon-heart--liked {
+  display: inline-block;
 }
 
 .loader__container {
@@ -884,6 +887,10 @@ header i:hover {
   animation: fadeInFresh 1s ease-in-out both;
   animation-delay: 0.6s;
 }
+.menu__article--list li:nth-child(4n) {
+  animation: fadeInFresh 1s ease-in-out both;
+  animation-delay: 0.8s;
+}
 .menu__article--list li:hover {
   box-shadow: 0 5px 5px rgba(48, 48, 48, 0.5);
   transform: translateY(-2px);
@@ -894,7 +901,7 @@ header i:hover {
   transform: translateX(0%);
 }
 .menu__article--list li:hover .menu__article--check i {
-  animation: fadeInSpin 0.5s ease;
+  animation: fadeInSpin 1s ease;
 }
 .menu__article--list li p {
   max-width: 90%;

@@ -1,15 +1,25 @@
 .icon-heart {
+  cursor: pointer;
   font-size: 25px;
-  color: $black;
 
-  &:hover {
-    @include colorGradiant(
-      0deg,
-      rgba($secondary, 0.9),
-      rgba($primary, 0.9) 80%,
-      null
-    );
-    @include animation(heart 1.2s);
-    animation-iteration-count: 3;
+  &--unliked {
+    color: $black;
   }
+
+  &--liked {
+    color: transparent;
+    background-image: linear-gradient(to top, $secondary, $primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    @include animation(heart 2s);
+  }
+}
+
+// use to switch icon (show/hidden)
+* > .fa-heart.icon-heart--liked,
+*:hover > .fa-heart.icon-heart--unliked {
+  display: none;
+}
+*:hover > .fa-heart.icon-heart--liked {
+  display: inline-block;
 }

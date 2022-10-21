@@ -94,7 +94,7 @@
         overflow: hidden;
         @include shadow(0, 3px, 3px, null);
 
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
           &:nth-child(#{$i}n) {
             @include animation(fadeInFresh 1s ease-in-out both);
             animation-delay: #{$i * 0.2}s;
@@ -113,7 +113,7 @@
 
           .menu__article--check {
             & i {
-              @include animation(fadeInSpin 0.5s ease);
+              @include animation(fadeInSpin 1s ease);
             }
           }
         }
