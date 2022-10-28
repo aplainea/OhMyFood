@@ -144,7 +144,7 @@
     }
 
     &--price {
-      @include absolute(30%, 0, null, null);
+      @include absolute(45%, 0, null, null);
       display: flex;
       align-items: flex-end;
       padding-right: 20px;
