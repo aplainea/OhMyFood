@@ -894,7 +894,11 @@ header i:hover {
 .menu__article--list li:hover {
   box-shadow: 0 5px 5px rgba(48, 48, 48, 0.5);
   transform: translateY(-2px);
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s position 0.3s;
+}
+.menu__article--list li:hover .menu__article--price {
+  position: initial;
+  padding-right: 0px;
 }
 .menu__article--list li:hover .menu__article--check {
   flex-basis: 15%;
@@ -918,8 +922,14 @@ header i:hover {
 }
 .menu__article--text h3 {
   font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__article--price {
+  position: absolute;
+  top: 30%;
+  right: 0;
   display: flex;
   align-items: flex-end;
   padding-right: 20px;

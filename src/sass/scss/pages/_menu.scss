@@ -104,7 +104,12 @@
         &:hover {
           @include shadow(0, 5px, 5px, rgba($gray, 0.5));
           transform: translateY(-2px);
-          transition: box-shadow 0.3s, transform 0.3s;
+          transition: box-shadow 0.3s, transform 0.3s position 0.3s;
+
+          .menu__article--price {
+              position: initial;
+              padding-right: 0px;
+          }
 
           .menu__article--check {
             flex-basis: 15%;
@@ -134,10 +139,12 @@
 
       h3 {
         font-size: 16px;
+        @include overText();
       }
     }
 
     &--price {
+      @include absolute(30%, 0, null, null);
       display: flex;
       align-items: flex-end;
       padding-right: 20px;
